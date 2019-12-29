@@ -14,7 +14,7 @@
   "author": "Farenheith",
   "license": "MIT",
   "dependencies": {
-    "base-project-config": "^1.1.0",
+    "base-project-config": "^1.1.2",
     "enforced-assertions": "^1.2.5",
     "sinon-chai-calls-assertion": "^1.4.2",
     "strict-mocha-describers": "^1.1.0"
