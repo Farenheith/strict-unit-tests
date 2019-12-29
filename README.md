@@ -105,5 +105,42 @@ beforeEach(() => {
 Look that, to mock in a beforeEach, target must be visible, so the approach to use the parameter passed to it is only useful if you don't want to mock anything in the beforeEach.
 Notice, also, that even static method will throw error if not mocked, and the recommended way to do it is always using stub. From our experience, stub work well for every case following this organization, and there's no need to have two way of doing the same thing.
 
+The code discussed here, so, would be similar to this:
 
+```typescript
+import {
+  beforeEach,
+  describeClass,
+  describeMethod,
+  it,
+  stub,
+  expect,
+  getFakeInstance,
+} from 'strict-unit-tests';
+
+let target: YourClass;
+let service: YourService;
+bootstrapFunction() {
+  service = getFakeInstance(YourService);
+  return target = new Target(service);
+}
+
+describeClass(YourClass, bootstrapFunction, describeMethod => {
+  describeMethod('methodName', () => {
+    beforeEach(() => {
+      stub(service, 'serviceCalledMethod').returns('Service mocked result');
+      stub(target, 'calledMethod').returns('Mocked result');
+    });
+
+    it('should do something', () => {
+      ...
+      expect(service.serviceCalledMethod).to.have.callsLike([]);
+      expect(target.calledMethod).to.have.callsLike([]);
+    });
+  });
+```
+
+As you can see, is very straight forward guideline for unit tests. There are elements used in the completed example not discussed before, but they are very simple:
+* getFakeInstance: it creates and object with the same method of the informed class, but all throwing error;
+* Also, we used traditional it, as we have scoped variable for the target.
 
