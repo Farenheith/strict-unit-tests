@@ -1,6 +1,6 @@
 {
   "name": "strict-unit-tests",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "",
   "main": "build/strict-unit-tests.js",
   "scripts": {
@@ -9,7 +9,8 @@
     "lint": "run-lint",
     "build:dev": "run-build-dev",
     "test:coverage": "run-test-coverage",
-    "test:coverage:lcovonly": "run-test-lcov"
+    "test:coverage:lcovonly": "run-test-lcov",
+    "prepublish": "npm run build"
   },
   "author": "Farenheith",
   "license": "MIT",
@@ -17,6 +18,6 @@
     "base-project-config": "^1.1.2",
     "enforced-assertions": "^1.2.5",
     "sinon-chai-calls-assertion": "^1.4.2",
-    "strict-mocha-describers": "^1.1.0"
+    "strict-mocha-describers": "^1.2.3"
   }
 }
