@@ -21,6 +21,18 @@ import 'strict-unit-tests';
 
 ```
 
-That's it. You Have your project with typescript, ts-node, mocha, sinon, chai and nyc, enforced-assertions, strict-mocha-describers and sinon-chai-calls-assertions, all ready to use.
+That's it. Now you have in your project:
+* typescript;
+* ts-node;
+* base-project-config;
+* mocha;
+* sinon;
+* chai;
+* nyc;
+* enforced-assertions;
+* strict-mocha-describers;
+* sinon-chai-calls-assertions;
+
+All of it proper configured with recommended setup and ready to use.
 
 You can get more details about each package in they own page, but is important to enforce that it is recommended to use the wrapper of this test to write all your tests. Take a look in the test folder, there we'll create a lot of examples of differents use cases.
