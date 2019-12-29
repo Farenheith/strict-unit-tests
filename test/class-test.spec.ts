@@ -1,9 +1,5 @@
 import {
-	describeClass,
-	stub,
-	stubSuperConstructor,
-	SinonStub,
-	expect
+	SinonStub, stubSuperConstructor, describeClass, stub, expect
 } from '../src/strict-unit-tests';
 
 class BaseTest {
@@ -42,7 +38,7 @@ describeClass(Test, bootStrapper, describeMethod => {
 			stub(target, 'methodBase').returns('methodBase result');
 		});
 
-		it('should call super properly', () => {
+		afterEach('should call super properly', () => {
 			expect(superStub).to.have.callsLike([]);
 		});
 
