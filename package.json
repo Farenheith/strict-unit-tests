@@ -9,23 +9,21 @@
     "lint": "run-lint",
     "test:coverage": "run-test-coverage",
     "test:coverage:lcovonly": "run-test-lcov",
-    "prepublish": "npm run build",
+    "prepublish": "npm run lint && npm run test:coverage && npm run build",
     "prebuild": "run-pre-build"
   },
   "author": "Farenheith",
   "license": "MIT",
   "dependencies": {
-    "enforced-assertions": "^1.2.5",
-    "sinon-chai-calls-assertion": "^1.4.2",
-    "strict-mocha-describers": "^1.2.3"
+    "base-project-config": "^1.2.7",
+    "enforced-assertions": "^1.3.0",
+    "sinon-chai-calls-assertion": "^1.5.1",
+    "strict-mocha-describers": "^1.3.1"
   },
   "directories": {
     "test": "test"
   },
-  "devDependencies": {
-    "base-project-config": "^1.2.7",
-    "mocha": "^6.2.2"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Farenheith/strict-unit-tests.git"
