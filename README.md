@@ -27,21 +27,21 @@ import 'strict-unit-tests';
 ```
 
 That's it. Now you have in your project:
-* typescript;
-* ts-node;
-* tslint;
-* base-project-config;
-* mocha;
-* sinon;
-* chai;
-* nyc;
-* enforced-assertions;
-* strict-unit-tests;
-* sinon-chai-calls-assertions;
+* [typescript](https://www.npmjs.com/package/typescript);
+* [ts-node](https://www.npmjs.com/package/ts-node);
+* [tslint](https://www.npmjs.com/package/tslint);
+* [base-project-config](https://www.npmjs.com/package/base-project-config);
+* [mocha](https://www.npmjs.com/package/mocha);
+* [sinon](https://www.npmjs.com/package/sinon);
+* [chai](https://www.npmjs.com/package/chai);
+* [nyc](https://www.npmjs.com/package/nyc);
+* [enforced-assertions](https://www.npmjs.com/package/enforced-assertions);
+* [strict-mocha-describers](https://www.npmjs.com/package/strict-mocha-describers);
+* [sinon-chai-calls-assertion](https://www.npmjs.com/package/sinon-chai-calls-assertion);
 
 All of it proper configured with recommended setup and ready to use.
 
-We'll to expose all the advantages to use this package in your next typescript project, but you can always get more details about each package used here in they own page, but is important to enforce that it is highly recommended to use the package wrapper to import all your tests libals.
+We'll try to expose all the advantages to use this package in your next typescript project, but you can always get more details about each package used here in they own page. It is important, however, to enforce that it is highly recommended to use the package wrapper to import all your tests libs.
 
 Also, take a look in the test folder, there we'll create a lot of examples of differents use cases.
 
@@ -49,7 +49,7 @@ Also, take a look in the test folder, there we'll create a lot of examples of di
 
 I love typescript, but one of the pains I feel when I'm coding in it is the lack of enforced standards. Also, having at our disposal the biggest code base on the internet, JavaScript, is good in the majority of time, but it also is a worsening factor in the standardization of the language.
 
-That said, with the collection of libs this package wrap, we're try tenforce guidelines for typescript projects that uses it:
+That said, with the collection of libs this package wrap, we're try to enforce guidelines for typescript projects that uses it:
 * Configuring default deputation commands;
 * Configuring basic npm-scripts;
 * Configuring tsconfig and tslint with strong and restrictive rules;
@@ -57,15 +57,15 @@ That said, with the collection of libs this package wrap, we're try tenforce gui
 * Setting a global behavior for unit tests;
 * Using libs to make unit tests more restrictive, rigid and easier to break;
 
-Of course, all of this so not rip off the freedom we have coding in js/ts, as all of this is configurable and you can also use just part of the functionalities offered here, but we strongly believe that all the rules enforced here can be suitable for most typescript project, as long it is following SOLID guidelines.
+Of course, all of this not ripping off the freedom we have coding in js/ts, as all of this is configurable and you can also use just part of the offered functionalities, but we strongly believe that all the rules enforced here can be suitable for most typescript project, as long it is following SOLID guidelines.
 
 
 ## About unit tests
 
 There are libs used here that we developed to make unit tests even more rigid that deserves a proper introduction.
-Let start with **strict-unit-tests**
+Let start with **strict-mocha-describers**
 
-### strict-unit-tests
+### strict-mocha-describers
 
 This lib offers different describers oriented to specific type of objects that helps to prevent **scope invasion**, that is, unit tests are meant to test just an unity of code, everything else must be mocked, specially external dependencies, but also another methods of the same target instance that is not the subject of the test.
 To create a unit test suite for a class using this lib, use the following command:
@@ -95,10 +95,10 @@ it('should do something', target => {...
 ```
 
 There you can create your single test case. But what is the big difference with the traditional describers?
-**at this point, all methods of target throws an error, except for the subject of the test, **methodName**.
+At this point, all methods of target throws an error, except for the subject of the test, **methodName**.
 This ensure that, no matter what maintenance you do in your code, the test will always break if you forgot to mock some method.
 
-The recommended approach here, so, is to mock just just the methods your method calls.
+The recommended approach here, so, is to mock just the methods your method calls.
 The best place to do it is in a **beforeEach** inside **describeMethod**, like this:
 
 ```typescript
@@ -145,7 +145,10 @@ describeClass(YourClass, bootstrapFunction, describeMethod => {
   });
 ```
 
-As you can see, is very straight forward guideline for unit tests. There are elements used in the completed example not discussed before, but they are very simple:
+As you can see, it's a very straight forward guideline for unit tests. There are elements used in the completed example not discussed before, but they are very simple:
 * getFakeInstance: it creates and object with the same method of the informed class, but all throwing error;
 * Also, we used traditional it, as we have scoped variable for the target.
 
+I hope this can be useful for you!
+
+Cheers!
