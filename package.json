@@ -35,6 +35,10 @@
   },
   "homepage": "https://github.com/Farenheith/strict-unit-tests#readme",
   "keywords": [
-    "mocha", "chai", "sinon", "strict unit tests", "strong assertions"
+    "mocha",
+    "chai",
+    "sinon",
+    "strict unit tests",
+    "strong assertions"
   ]
 }

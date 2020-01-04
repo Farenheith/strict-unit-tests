@@ -1,4 +1,9 @@
 # strict-unit-tests
+[![Build Status](https://travis-ci.com/Farenheith/strict-unit-tests.svg?branch=master)](https://travis-ci.com/Farenheith/strict-unit-tests)
+[![codecov](https://codecov.io/gh/Farenheith/strict-unit-tests/branch/master/graph/badge.svg)](https://codecov.io/gh/Farenheith/strict-unit-tests)
+[![Maintainability](https://api.codeclimate.com/v1/badges/1f81c6690e7d0feeadaa/maintainability)](https://codeclimate.com/github/Farenheith/strict-unit-tests/maintainability)
+[![Packages](https://david-dm.org/Farenheith/strict-unit-tests.svg)](https://david-dm.org/Farenheith/strict-unit-tests)
+[![npm version](https://badge.fury.io/js/strict-unit-tests.svg)](https://badge.fury.io/js/strict-unit-tests)
 
 A wrapper for many test related lib to create stricts and enforced unit tests
 
@@ -31,7 +36,7 @@ That's it. Now you have in your project:
 * chai;
 * nyc;
 * enforced-assertions;
-* strict-mocha-describers;
+* strict-unit-tests;
 * sinon-chai-calls-assertions;
 
 All of it proper configured with recommended setup and ready to use.
@@ -58,9 +63,9 @@ Of course, all of this so not rip off the freedom we have coding in js/ts, as al
 ## About unit tests
 
 There are libs used here that we developed to make unit tests even more rigid that deserves a proper introduction.
-Let start with **strict-mocha-describers**
+Let start with **strict-unit-tests**
 
-### strict-mocha-describers
+### strict-unit-tests
 
 This lib offers different describers oriented to specific type of objects that helps to prevent **scope invasion**, that is, unit tests are meant to test just an unity of code, everything else must be mocked, specially external dependencies, but also another methods of the same target instance that is not the subject of the test.
 To create a unit test suite for a class using this lib, use the following command:
