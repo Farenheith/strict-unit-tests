@@ -20,7 +20,3 @@ import 'mocha';
 
 chai.use(callsLike);
 enforceStubsAssertions(sinon, chai);
-
-beforeEach(() => {
-	sinon.restore();
-});
