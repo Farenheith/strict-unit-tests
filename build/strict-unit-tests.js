@@ -19,7 +19,6 @@ exports.it = mocha_1.it;
 var sinon_chai_calls_assertion_2 = require("sinon-chai-calls-assertion");
 exports.stubSuperConstructor = sinon_chai_calls_assertion_2.stubSuperConstructor;
 __export(require("strict-mocha-describers"));
-const mocha_2 = require("mocha");
 exports.match = sinon.match;
 function stub(obj, method) {
     return sinon.stub(obj, method);
@@ -28,7 +27,4 @@ exports.stub = stub;
 require("mocha");
 chai.use(sinon_chai_calls_assertion_1.callsLike);
 enforced_assertions_1.enforceStubsAssertions(sinon, chai);
-mocha_2.beforeEach(() => {
-    sinon.restore();
-});
 //# sourceMappingURL=strict-unit-tests.js.map
