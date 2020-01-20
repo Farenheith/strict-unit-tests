@@ -14,3 +14,7 @@ export function stub<T, K extends keyof T>(obj?: T, method?: K) {
 
 chai.use(callsLike);
 enforceStubsAssertions(sinon, chai);
+
+beforeEach(() => {
+	sinon.restore();
+})
