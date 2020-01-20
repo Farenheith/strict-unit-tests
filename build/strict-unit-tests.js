@@ -7,8 +7,6 @@ const chai = require("chai");
 const sinon = require("sinon");
 const sinon_chai_calls_assertion_1 = require("sinon-chai-calls-assertion");
 const enforced_assertions_1 = require("enforced-assertions");
-var sinon_1 = require("sinon");
-exports.match = sinon_1.match;
 var chai_1 = require("chai");
 exports.expect = chai_1.expect;
 var mocha_1 = require("mocha");
@@ -22,6 +20,7 @@ var sinon_chai_calls_assertion_2 = require("sinon-chai-calls-assertion");
 exports.stubSuperConstructor = sinon_chai_calls_assertion_2.stubSuperConstructor;
 __export(require("strict-mocha-describers"));
 const mocha_2 = require("mocha");
+exports.match = sinon.match;
 function stub(obj, method) {
     return sinon.stub(obj, method);
 }
