@@ -2,7 +2,7 @@
   "name": "strict-unit-tests",
   "version": "2.0.0",
   "description": "A wrapper for many test related lib to create stricts and enforced unit tests",
-  "main": "build/strict-unit-tests.js",
+  "main": "build/index.js",
   "scripts": {
     "test": "run-test",
     "build": "run-build",

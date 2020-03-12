@@ -1,7 +1,7 @@
 import {
 	SinonStub, stubSuperConstructor, describeClass, stub, expect,
 	fakeStaticClass, getFakeInstance,
-} from '../src/strict-unit-tests';
+} from '../src/index';
 
 class Service {
 	method1() {
