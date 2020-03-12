@@ -9,7 +9,6 @@
     "lint": "run-lint",
     "test:coverage": "run-test-coverage",
     "test:coverage:lcovonly": "run-test-lcov",
-    "prepublish": "npm run lint && npm run test:coverage && npm run build",
     "prebuild": "run-pre-build"
   },
   "author": "Farenheith",
