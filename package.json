@@ -11,7 +11,10 @@
     "test:coverage:lcovonly": "run-test-lcov",
     "prebuild": "run-pre-build",
     "prepublish": "npm run build"
-  },
+	},
+	"files": [
+		"build"
+	],
   "author": "Farenheith",
   "license": "MIT",
   "dependencies": {
