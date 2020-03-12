@@ -7,14 +7,13 @@ export { before, after, beforeEach, afterEach, describe, it } from 'mocha';
 export { stubSuperConstructor } from 'sinon-chai-calls-assertion';
 export * from 'strict-mocha-describers';
 
-import { beforeEach } from 'mocha';
-
 export const match = sinon.match;
 // tslint:disable-next-line: no-any
 export type SinonStub = sinon.SinonStub<any, any>;
 
 export function stub<T, K extends keyof T>(obj?: T, method?: K) {
-	return sinon.stub(obj!, method!) as SinonStub;
+	// tslint:disable-next-line: no-any
+	return sinon.stub(obj as any, method as any) as SinonStub;
 }
 import 'mocha';
 
