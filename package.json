@@ -1,6 +1,6 @@
 {
   "name": "strict-unit-tests",
-  "version": "2.0.1",
+  "version": "2.0.4",
   "description": "A wrapper for many test related lib to create stricts and enforced unit tests",
   "main": "build/index.js",
   "scripts": {
@@ -9,9 +9,12 @@
     "lint": "run-lint",
     "test:coverage": "run-test-coverage",
     "test:coverage:lcovonly": "run-test-lcov",
-    "prepublish": "npm run lint && npm run test:coverage && npm run build",
-    "prebuild": "run-pre-build"
+    "prebuild": "run-pre-build",
+    "prepublish": "npm run build"
   },
+  "files": [
+    "build"
+  ],
   "author": "Farenheith",
   "license": "MIT",
   "dependencies": {
