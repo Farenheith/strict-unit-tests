@@ -14,7 +14,7 @@ export type SinonStub = sinon.SinonStub<any, any>;
 
 export function stub<T, K extends keyof T>(obj?: T, method?: K) {
 	// tslint:disable-next-line: no-any
-	return sinon.stub(obj as any, method as any) as SinonStub;
+	return sinon.stub(obj as any, method as any);
 }
 
 chai.use(callsLike);
