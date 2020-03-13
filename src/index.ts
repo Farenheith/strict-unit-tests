@@ -1,3 +1,4 @@
+import 'mocha';
 import * as chai from 'chai';
 import sinon = require('sinon');
 import { callsLike } from 'sinon-chai-calls-assertion';
@@ -15,7 +16,6 @@ export function stub<T, K extends keyof T>(obj?: T, method?: K) {
 	// tslint:disable-next-line: no-any
 	return sinon.stub(obj as any, method as any) as SinonStub;
 }
-import 'mocha';
 
 chai.use(callsLike);
 enforceStubsAssertions(sinon, chai);
