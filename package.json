@@ -21,7 +21,7 @@
     "base-project-config": "^2.0.8",
     "enforced-assertions": "^2.0.0",
     "sinon-chai-calls-assertion": "^2.0.0",
-    "strict-mocha-describers": "^2.0.1"
+    "strict-mocha-describers": "^2.0.2"
   },
   "directories": {
     "test": "test"
