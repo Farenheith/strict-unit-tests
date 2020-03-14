@@ -1,6 +1,6 @@
 {
   "name": "strict-unit-tests",
-  "version": "2.0.8",
+  "version": "2.0.9",
   "description": "A wrapper for many test related lib to create stricts and enforced unit tests",
   "main": "build/index.js",
   "scripts": {
